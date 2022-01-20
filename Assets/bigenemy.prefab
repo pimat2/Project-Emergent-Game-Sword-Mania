@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4074259986276903501}
   - component: {fileID: -8837173582443721233}
   - component: {fileID: 9035615455691022030}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bigenemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}

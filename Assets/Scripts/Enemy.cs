@@ -28,6 +28,8 @@ public class Enemy : MonoBehaviour
             spriterenderer.flipX = false;
             collisionTrigger = false;
         }
+
+        
     }
     
 
