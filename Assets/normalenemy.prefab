@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4835070106605055276}
   - component: {fileID: -7253909179484003413}
   - component: {fileID: -8822250310717284200}
+  - component: {fileID: 8934300520037584106}
   m_Layer: 3
   m_Name: normalenemy
   m_TagString: Enemy
@@ -97,8 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d4641ee410024046b2509088688ebb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 70
   speed: 3
-  health: 75
   moneyGained: 25
 --- !u!50 &-7253909179484003413
 Rigidbody2D:
@@ -147,3 +148,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.08460876, y: 0.122304514}
   m_EdgeRadius: 0
+--- !u!95 &8934300520037584106
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7056903626333904501}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 17eb179c78c0393408aba6aebf1de2c1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

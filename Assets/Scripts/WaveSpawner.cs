@@ -50,7 +50,17 @@ public class WaveSpawner : MonoBehaviour
     
     void SpawnEnemy()
     {
-        Instantiate(enemyPrefabs[Random.Range(0, 3)], spawnPoints[Random.Range(0,2)].position, spawnPoints[Random.Range(0,2)].rotation);
+           
+           int x = Random.Range(1,101);
+           if(x<11){
+               Instantiate(enemyPrefabs[0],spawnPoints[Random.Range(0,2)].position,spawnPoints[Random.Range(0,2)].rotation);
+           }
+            else if(x<41){
+               Instantiate(enemyPrefabs[1],spawnPoints[Random.Range(0,2)].position,spawnPoints[Random.Range(0,2)].rotation);
+           }
+           else if(x<101){
+               Instantiate(enemyPrefabs[2],spawnPoints[Random.Range(0,2)].position,spawnPoints[Random.Range(0,2)].rotation);
+           }
     }
 
 }

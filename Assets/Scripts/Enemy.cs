@@ -4,52 +4,37 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-
-    
     private bool collisionTrigger = false;
-
     private SpriteRenderer spriterenderer;
+    public int maxHealth = 100;
+    int currentHealth;
     public float speed = 10f;
-    public int health = 100;
-
     public int moneyGained = 50;
-
-     
-
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag == "Wall" && collisionTrigger ==false ){
-
             spriterenderer.flipX = true;
             collisionTrigger = true;
-            
- 
         }
         else if(collision.gameObject.tag =="Wall" && collisionTrigger == true){
             spriterenderer.flipX = false;
             collisionTrigger = false;
         }
-
-        
-    }
-    
-
+    }   
     private void Awake() {
         spriterenderer = GetComponent<SpriteRenderer>();
     }
-
-    public void TakeDamage(int amount)
+    private void Start() {
+        currentHealth = maxHealth;
+    }
+    public void TakeDamage(int damage)
     {
-        health -= amount;
+        currentHealth -= damage;
 
-        if(health <= 0)
+        if(currentHealth <= 0)
         {
-            Die();
+             Destroy(gameObject);
         }
-
-        void Die()
-        {            
-            Destroy(gameObject);
-        }
+        
     }
 
     private void Update() {
@@ -58,13 +43,8 @@ public class Enemy : MonoBehaviour
             transform.Translate(speedAmount,0,0);
         } 
         else{
-             
         transform.Translate(-speedAmount,0,0);
-
         }
-
-        
-        
     }
 
     
