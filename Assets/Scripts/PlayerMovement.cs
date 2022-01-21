@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class movemen : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
 
-    public GameObject weaponObject;
+    
     public Animator animator;
     public float cooldownTimer;
     private bool jumpCooldown = false;

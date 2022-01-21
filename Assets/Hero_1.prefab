@@ -98,9 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f75929811ed4ce04980540fbd936285f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldownTimer: 1
+  animator: {fileID: 0}
+  cooldownTimer: 2
   speed: 5
-  jumpHeight: {x: 0, y: 2.5}
+  jumpHeight: {x: 0, y: 3}
 --- !u!61 &4166332304495272600
 BoxCollider2D:
   m_ObjectHideFlags: 0
