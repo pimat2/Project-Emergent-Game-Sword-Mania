@@ -40,7 +40,7 @@ public class WaveSpawner : MonoBehaviour
         waveNumber++;
         currentWave.text = PlayerStats.Rounds.ToString();
         PlayerStats.Rounds++;
-        for (int i = 0; i < waveNumber; i++)
+        for (int i = 0; i < waveNumber; i++) //increases amount of enemies with each consecutive wave
         {
 
             SpawnEnemy();
@@ -52,7 +52,7 @@ public class WaveSpawner : MonoBehaviour
     void SpawnEnemy()
     {
            
-           int x = Random.Range(1,101);
+           int x = Random.Range(1,101); //weighted distribution makes certain enemies less likely to appear
            if(x<11){
                Instantiate(enemyPrefabs[0],spawnPoints[Random.Range(0,2)].position,spawnPoints[Random.Range(0,2)].rotation);
            }

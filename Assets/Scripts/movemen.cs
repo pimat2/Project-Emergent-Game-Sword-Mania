@@ -12,7 +12,7 @@ public class movemen : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public float speed;
     public Vector2 jumpHeight;
-    // Start is called before the first frame update
+    
     void Awake()
     {
        spriteRenderer = GetComponent<SpriteRenderer>();
@@ -20,9 +20,8 @@ public class movemen : MonoBehaviour
 
 void ResetCooldown(){
         jumpCooldown = false;
-
     }
-    // Update is called once per frame
+
     void Update()
     {
        //movement of the player plus sprite flipping
@@ -38,10 +37,6 @@ void ResetCooldown(){
         animator.SetFloat("Speed", Mathf.Abs(speedAmount));
         
         
-        
-        
-        
-        
         if ( Input.GetKeyDown(KeyCode.Space))  //makes player jump
     {
         if(jumpCooldown == false){ //cooldown so that players can't spam the jump key
@@ -50,11 +45,6 @@ void ResetCooldown(){
             jumpCooldown = true;
 
         }
-        
-
     }
-    
-        
-    
 }
 }

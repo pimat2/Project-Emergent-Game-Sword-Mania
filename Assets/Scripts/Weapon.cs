@@ -8,7 +8,6 @@ public class Weapon : MonoBehaviour
     public LayerMask enemyLayer;
     public Animator animator;
     public int damageAmount = 1;
-    public float pushForce = 2.0f;
     private float cooldown = 0.5f;
     private float lastSwing;
     public float attackRange = 0.5f;
@@ -36,7 +35,7 @@ public class Weapon : MonoBehaviour
             enemy.GetComponent<Enemy>().TakeDamage(damageAmount);
         }
     }
-    private void OnDrawGizmosSelected() {
+    private void OnDrawGizmosSelected() { //easier to see the attack radius 
 
         if(attackPoint==null)
             return;
