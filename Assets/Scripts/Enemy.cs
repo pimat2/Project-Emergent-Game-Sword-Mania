@@ -32,6 +32,7 @@ public class Enemy : MonoBehaviour
 
         if(currentHealth <= 0)
         {
+            PlayerStats.Money = PlayerStats.Money + moneyGained;
              Destroy(gameObject);
         }
         
