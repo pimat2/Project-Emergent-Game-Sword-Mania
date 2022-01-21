@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -12,11 +13,11 @@ public class WaveSpawner : MonoBehaviour
 
     private float countdown = 10f;
 
-    //public Text waveCountdownText;
+    public Text waveCountdownText;
 
     private int waveNumber = 0;
 
-    //public Text currentWave;
+    public Text currentWave;
 
      void Update()
     {
@@ -31,13 +32,13 @@ public class WaveSpawner : MonoBehaviour
 
         countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
 
-        //waveCountdownText.text = string.Format("{0:00.0}", countdown);
+        waveCountdownText.text = string.Format("{0:00.0}", countdown);
     }
 
     IEnumerator SpawnWave()
     {
         waveNumber++;
-       // currentWave.text = PlayerStats.Rounds.ToString();
+        currentWave.text = PlayerStats.Rounds.ToString();
         PlayerStats.Rounds++;
         for (int i = 0; i < waveNumber; i++)
         {
